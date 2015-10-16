@@ -12,9 +12,6 @@ public abstract class AbstractPiece
 
       protected final ColorEnum couleur;
 
-      /**
-       * Default : 0 when it hasn't moved yet, 1 when it already moved
-       */
       public boolean hasAlreadyMove;
 
       
@@ -54,14 +51,6 @@ public abstract class AbstractPiece
             return this.couleur;
       }
 
-      /**
-       * Détermine les différents movements possible à partir d'une position de
-       * départ donnée
-       *
-       * @param positionDepart La position actuelle de la pièce
-       * @return Une liste de tout les déplacements possible à partir d'une
-       *         position
-       */
       public abstract List<Position> possibleMovements(Position positionDepart);
 
       @Override
