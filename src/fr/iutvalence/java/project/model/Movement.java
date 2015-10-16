@@ -1,9 +1,10 @@
-package fr.iutvalence.java.project.chessgame;
+package fr.iutvalence.java.project.model;
 
 
 import java.awt.Image;
-import fr.iutvalence.java.project.gui.BoardGUI;
-import fr.iutvalence.java.project.gui.PieceGUI;
+
+import fr.iutvalence.java.project.view.BoardGUI;
+import fr.iutvalence.java.project.view.PieceGUI;
 
 
 public class Movement

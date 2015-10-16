@@ -1,28 +1,30 @@
-package fr.iutvalence.java.project.chessgame;
+package fr.iutvalence.java.project.model;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ROOK extends AbstractPiece
+public class Bishop extends AbstractPiece
 {
-      private final int[][] listPosition = { { 1, 0 }, { 0, -1 }, { -1, 0 }, { 0, 1 } };
+     
+      private final int[][] listPosition = { { 1, 1 }, { 1, -1 }, { -1, -1 }, { -1, 1 } };
 
-      public ROOK(ColorEnum couleur)
+      public Bishop(ColorEnum couleur)
       {
             super(couleur);
-            this.Piecetype = PieceType.ROOK;
+            this.Piecetype = PieceType.BISHOP;
             if (couleur == ColorEnum.BLACK)
             {
-                  this.PieceName = ListPieces.BLACK_ROOK;
+                  this.PieceName = ListPieces.BLACK_BISHOP;
             }
             else
             {
-                  this.PieceName = ListPieces.WHITE_ROOK;
+                  this.PieceName = ListPieces.WHITE_BISHOP;
             }
       }
 
+      
       @Override
       public List<Position> possibleMovements(Position positionDepart)
       {
@@ -58,10 +60,11 @@ public class ROOK extends AbstractPiece
             return possibleMovement;
       }
 
+     
       @Override
       public String toString()
       {
-            return "T" + super.toString();
+            return "F" + super.toString();
       }
 
 }

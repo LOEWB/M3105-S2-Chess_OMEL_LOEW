@@ -1,11 +1,13 @@
-package fr.iutvalence.java.project.gui;
+package fr.iutvalence.java.project.view;
 
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
+
 import javax.swing.JButton;
-import fr.iutvalence.java.project.chessgame.Position;
+
+import fr.iutvalence.java.project.model.Position;
 
 
 public class SquareButton extends JButton

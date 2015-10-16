@@ -1,10 +1,12 @@
-package fr.iutvalence.java.project.gui;
+package fr.iutvalence.java.project.view;
 
 
 import java.awt.Image;
 import java.util.HashMap;
+
 import javax.swing.ImageIcon;
-import fr.iutvalence.java.project.chessgame.ListPieces;
+
+import fr.iutvalence.java.project.model.ListPieces;
 
 
 public class PieceGUI

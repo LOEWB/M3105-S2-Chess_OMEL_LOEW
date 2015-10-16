@@ -1,4 +1,4 @@
-package fr.iutvalence.java.project.gui;
+package fr.iutvalence.java.project.view;
 
 
 import java.awt.Color;
@@ -6,13 +6,15 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 import javax.swing.JTextField;
-import fr.iutvalence.java.project.chessgame.Game;
+
+import fr.iutvalence.java.project.model.Game;
 
 
 public class FieldPlayerGUI extends JFrame implements ActionListener

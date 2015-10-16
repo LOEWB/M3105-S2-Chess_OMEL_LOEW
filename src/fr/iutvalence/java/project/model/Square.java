@@ -1,4 +1,4 @@
-package fr.iutvalence.java.project.chessgame;
+package fr.iutvalence.java.project.model;
 
 
 public class Square

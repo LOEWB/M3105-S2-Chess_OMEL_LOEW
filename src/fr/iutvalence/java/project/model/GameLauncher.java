@@ -1,7 +1,7 @@
-package fr.iutvalence.java.project.chessgame;
+package fr.iutvalence.java.project.model;
 
 
-import fr.iutvalence.java.project.gui.MenuGUI;
+import fr.iutvalence.java.project.view.MenuGUI;
 
 
 public class GameLauncher

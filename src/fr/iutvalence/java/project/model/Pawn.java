@@ -1,4 +1,4 @@
-package fr.iutvalence.java.project.chessgame;
+package fr.iutvalence.java.project.model;
 
 
 import java.util.ArrayList;

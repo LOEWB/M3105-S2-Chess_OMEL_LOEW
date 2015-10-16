@@ -1,4 +1,4 @@
-package fr.iutvalence.java.project.gui;
+package fr.iutvalence.java.project.view;
 
 
 import java.awt.Color;
@@ -9,18 +9,20 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ListIterator;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
-import fr.iutvalence.java.project.chessgame.AbstractPiece;
-import fr.iutvalence.java.project.chessgame.ColorEnum;
-import fr.iutvalence.java.project.chessgame.Echiquier;
-import fr.iutvalence.java.project.chessgame.Game;
-import fr.iutvalence.java.project.chessgame.King;
-import fr.iutvalence.java.project.chessgame.ListPieces;
-import fr.iutvalence.java.project.chessgame.Movement;
-import fr.iutvalence.java.project.chessgame.PieceType;
-import fr.iutvalence.java.project.chessgame.Position;
+
+import fr.iutvalence.java.project.model.AbstractPiece;
+import fr.iutvalence.java.project.model.ColorEnum;
+import fr.iutvalence.java.project.model.Echiquier;
+import fr.iutvalence.java.project.model.Game;
+import fr.iutvalence.java.project.model.King;
+import fr.iutvalence.java.project.model.ListPieces;
+import fr.iutvalence.java.project.model.Movement;
+import fr.iutvalence.java.project.model.PieceType;
+import fr.iutvalence.java.project.model.Position;
 
 
 public class BoardGUI extends JPanel implements ActionListener
@@ -72,7 +74,6 @@ public class BoardGUI extends JPanel implements ActionListener
       {
             Thread graphicT = new Thread()
             {
-
                   @Override
                   public void run()
                   {
@@ -254,13 +255,13 @@ public class BoardGUI extends JPanel implements ActionListener
                                     {
                                           this.theUserInterface.getTheGame().setCurPlayer(ColorEnum.BLACK);
                                           this.theUserInterface.getTheGame().setLastPlayer(ColorEnum.WHITE);
-                                          this.theUserInterface.getTheGame().itIsBlackTurn();
+                                          this.theUserInterface.getTheGame().blackTurnDisplay();
                                     }
                                     else
                                     {
                                           this.theUserInterface.getTheGame().setCurPlayer(ColorEnum.WHITE);
                                           this.theUserInterface.getTheGame().setLastPlayer(ColorEnum.BLACK);
-                                          this.theUserInterface.getTheGame().itIsWhiteTurn();
+                                          this.theUserInterface.getTheGame().whiteTurnDisplay();
                                     }
 
                               }
@@ -290,13 +291,13 @@ public class BoardGUI extends JPanel implements ActionListener
                                     {
                                           this.theUserInterface.getTheGame().setCurPlayer(ColorEnum.BLACK);
                                           this.theUserInterface.getTheGame().setLastPlayer(ColorEnum.WHITE);
-                                          this.theUserInterface.getTheGame().itIsBlackTurn();
+                                          this.theUserInterface.getTheGame().blackTurnDisplay();
                                     }
                                     else
                                     {
                                           this.theUserInterface.getTheGame().setCurPlayer(ColorEnum.WHITE);
                                           this.theUserInterface.getTheGame().setLastPlayer(ColorEnum.BLACK);
-                                          this.theUserInterface.getTheGame().itIsWhiteTurn();
+                                          this.theUserInterface.getTheGame().whiteTurnDisplay();
                                     }
                               }
                               else if (currentPiece.getPosition().equals(King.ROQUE3))
@@ -325,13 +326,13 @@ public class BoardGUI extends JPanel implements ActionListener
                                     {
                                           this.theUserInterface.getTheGame().setCurPlayer(ColorEnum.BLACK);
                                           this.theUserInterface.getTheGame().setLastPlayer(ColorEnum.WHITE);
-                                          this.theUserInterface.getTheGame().itIsBlackTurn();
+                                          this.theUserInterface.getTheGame().blackTurnDisplay();
                                     }
                                     else
                                     {
                                           this.theUserInterface.getTheGame().setCurPlayer(ColorEnum.WHITE);
                                           this.theUserInterface.getTheGame().setLastPlayer(ColorEnum.BLACK);
-                                          this.theUserInterface.getTheGame().itIsWhiteTurn();
+                                          this.theUserInterface.getTheGame().whiteTurnDisplay();
                                     }
                               }
                               else if (currentPiece.getPosition().equals(King.ROQUE4))
@@ -360,13 +361,13 @@ public class BoardGUI extends JPanel implements ActionListener
                                     {
                                           this.theUserInterface.getTheGame().setCurPlayer(ColorEnum.BLACK);
                                           this.theUserInterface.getTheGame().setLastPlayer(ColorEnum.WHITE);
-                                          this.theUserInterface.getTheGame().itIsBlackTurn();
+                                          this.theUserInterface.getTheGame().blackTurnDisplay();
                                     }
                                     else
                                     {
                                           this.theUserInterface.getTheGame().setCurPlayer(ColorEnum.WHITE);
                                           this.theUserInterface.getTheGame().setLastPlayer(ColorEnum.BLACK);
-                                          this.theUserInterface.getTheGame().itIsWhiteTurn();
+                                          this.theUserInterface.getTheGame().whiteTurnDisplay();
                                     }
                               }
                               // deplacement roi != roque
@@ -400,13 +401,13 @@ public class BoardGUI extends JPanel implements ActionListener
                                     {
                                           this.theUserInterface.getTheGame().setCurPlayer(ColorEnum.BLACK);
                                           this.theUserInterface.getTheGame().setLastPlayer(ColorEnum.WHITE);
-                                          this.theUserInterface.getTheGame().itIsBlackTurn();
+                                          this.theUserInterface.getTheGame().blackTurnDisplay();
                                     }
                                     else
                                     {
                                           this.theUserInterface.getTheGame().setCurPlayer(ColorEnum.WHITE);
                                           this.theUserInterface.getTheGame().setLastPlayer(ColorEnum.BLACK);
-                                          this.theUserInterface.getTheGame().itIsWhiteTurn();
+                                          this.theUserInterface.getTheGame().whiteTurnDisplay();
                                     }
                               }
                         }
@@ -444,13 +445,13 @@ public class BoardGUI extends JPanel implements ActionListener
                               {
                                     this.theUserInterface.getTheGame().setCurPlayer(ColorEnum.BLACK);
                                     this.theUserInterface.getTheGame().setLastPlayer(ColorEnum.WHITE);
-                                    this.theUserInterface.getTheGame().itIsBlackTurn();
+                                    this.theUserInterface.getTheGame().blackTurnDisplay();
                               }
                               else
                               {
                                     this.theUserInterface.getTheGame().setCurPlayer(ColorEnum.WHITE);
                                     this.theUserInterface.getTheGame().setLastPlayer(ColorEnum.BLACK);
-                                    this.theUserInterface.getTheGame().itIsWhiteTurn();
+                                    this.theUserInterface.getTheGame().whiteTurnDisplay();
                               }
                         }
                         else

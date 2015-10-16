@@ -1,26 +1,25 @@
-package fr.iutvalence.java.project.chessgame;
+package fr.iutvalence.java.project.model;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class Queen extends AbstractPiece
+public class ROOK extends AbstractPiece
 {
+      private final int[][] listPosition = { { 1, 0 }, { 0, -1 }, { -1, 0 }, { 0, 1 } };
 
-      private final int[][] listPosition = { { 1, 0 }, { 0, -1 }, { -1, 0 }, { 0, 1 }, { 1, 1 }, { 1, -1 }, { -1, -1 }, { -1, 1 } };
-
-      public Queen(ColorEnum couleur)
+      public ROOK(ColorEnum couleur)
       {
             super(couleur);
-            this.Piecetype = PieceType.QUEEN;
+            this.Piecetype = PieceType.ROOK;
             if (couleur == ColorEnum.BLACK)
             {
-                  this.PieceName = ListPieces.BLACK_QUEEN;
+                  this.PieceName = ListPieces.BLACK_ROOK;
             }
             else
             {
-                  this.PieceName = ListPieces.WHITE_QUEEN;
+                  this.PieceName = ListPieces.WHITE_ROOK;
             }
       }
 
@@ -62,7 +61,7 @@ public class Queen extends AbstractPiece
       @Override
       public String toString()
       {
-            return "r" + super.toString();
+            return "T" + super.toString();
       }
 
 }

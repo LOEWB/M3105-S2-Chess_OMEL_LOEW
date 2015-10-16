@@ -1,11 +1,12 @@
-package fr.iutvalence.java.project.chessgame;
+package fr.iutvalence.java.project.model;
 
 
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
-import fr.iutvalence.java.project.gui.GameGUI;
+
+import fr.iutvalence.java.project.view.GameGUI;
 
 
 public class Game
@@ -60,7 +61,7 @@ public class Game
             Game.userInterface = new GameGUI(this);
             this.blackPlayer = new Player(ColorEnum.BLACK);
             this.whitePlayer = new Player(ColorEnum.WHITE);
-            this.itIsWhiteTurn();
+            this.whiteTurnDisplay();
             Game.curPlayer = ColorEnum.WHITE;
             Game.lastPlayer = null;
             Game.currentMove = -1;
@@ -118,7 +119,7 @@ public class Game
             return isWhiteTurn;
       }
 
-      public void itIsBlackTurn()
+      public void blackTurnDisplay()
       {
 
             this.getUserInterface();
@@ -126,10 +127,9 @@ public class Game
             this.getUserInterface();
             GameGUI.joueur2.setBackground(Color.WHITE);
             this.isWhiteTurn = false;
-
       }
 
-      public void itIsWhiteTurn()
+      public void whiteTurnDisplay()
       {
 
             this.getUserInterface();

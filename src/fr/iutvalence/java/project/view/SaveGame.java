@@ -1,4 +1,4 @@
-package fr.iutvalence.java.project.gui;
+package fr.iutvalence.java.project.view;
 
 
 import java.io.BufferedWriter;

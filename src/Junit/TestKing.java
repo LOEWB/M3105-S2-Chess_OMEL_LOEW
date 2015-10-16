@@ -3,14 +3,15 @@ package Junit;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import fr.iutvalence.java.project.chessgame.Bishop;
-import fr.iutvalence.java.project.chessgame.ColorEnum;
-import fr.iutvalence.java.project.chessgame.Echiquier;
-import fr.iutvalence.java.project.chessgame.King;
-import fr.iutvalence.java.project.chessgame.Position;
+import fr.iutvalence.java.project.model.Bishop;
+import fr.iutvalence.java.project.model.ColorEnum;
+import fr.iutvalence.java.project.model.Echiquier;
+import fr.iutvalence.java.project.model.King;
+import fr.iutvalence.java.project.model.Position;
 
 
 public class TestKing extends TestCase
