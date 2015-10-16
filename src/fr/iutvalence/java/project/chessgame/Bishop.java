@@ -5,21 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * Une pièce de fou
- */
 public class Bishop extends AbstractPiece
 {
-      /**
-       * La liste des différentes positions possible terme de coordonnées
-       */
+     
       private final int[][] listPosition = { { 1, 1 }, { 1, -1 }, { -1, -1 }, { -1, 1 } };
 
-      /**
-       * Créer un fou de couleur donnée
-       *
-       * @param couleur La couleur du fou
-       */
       public Bishop(ColorEnum couleur)
       {
             super(couleur);
@@ -34,14 +24,7 @@ public class Bishop extends AbstractPiece
             }
       }
 
-      /**
-       * Détermine les différents movements possible à partir d'une position de
-       * départ donnée
-       *
-       * @param positionDepart La position actuelle de la pièce
-       * @return Une liste de tout les déplacements possible à partir d'une
-       *         position
-       */
+      
       @Override
       public List<Position> possibleMovements(Position positionDepart)
       {
@@ -77,9 +60,7 @@ public class Bishop extends AbstractPiece
             return possibleMovement;
       }
 
-      /**
-       * @see java.lang.Object#toString()
-       */
+     
       @Override
       public String toString()
       {

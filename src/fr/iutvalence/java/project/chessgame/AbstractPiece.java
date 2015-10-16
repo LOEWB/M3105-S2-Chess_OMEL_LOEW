@@ -4,24 +4,12 @@ package fr.iutvalence.java.project.chessgame;
 import java.util.List;
 
 
-/**
- * Une pièce type
- */
 public abstract class AbstractPiece
 {
-      /**
-       * Le type de la pièce
-       */
       protected PieceType Piecetype;
 
-      /**
-       * Le nom de la pièce
-       */
       protected ListPieces PieceName;
 
-      /**
-       * La couleur de la pièce
-       */
       protected final ColorEnum couleur;
 
       /**
@@ -29,40 +17,23 @@ public abstract class AbstractPiece
        */
       public boolean hasAlreadyMove;
 
-      /**
-       * Créer une pièce de couleur donnée
-       *
-       * @param couleur la couleur
-       */
+      
       protected AbstractPiece(ColorEnum couleur)
       {
             this.couleur = couleur;
             this.hasAlreadyMove = false;
       }
 
-      /**
-       * Obtenir le nom de la piece
-       *
-       * @return le nom
-       */
       public ListPieces getPieceName()
       {
             return this.PieceName;
       }
 
-      /**
-       * Obtenir le type de la piece
-       *
-       * @return le type
-       */
       public PieceType getPieceType()
       {
             return this.Piecetype;
       }
 
-      /**
-       * @return the hasAlreadyMove
-       */
       public boolean isHasAlreadyMove()
       {
             return hasAlreadyMove;
@@ -72,20 +43,12 @@ public abstract class AbstractPiece
       {
             this.hasAlreadyMove = false;
       }
-
-      /**
-       * This piece has moved
-       */
+      
       public void itMoved()
       {
             this.hasAlreadyMove = true;
       }
 
-      /**
-       * Obtenir la couleur de la piece
-       *
-       * @return la couleur de la piece
-       */
       public ColorEnum obtenirCouleur()
       {
             return this.couleur;
@@ -101,9 +64,6 @@ public abstract class AbstractPiece
        */
       public abstract List<Position> possibleMovements(Position positionDepart);
 
-      /**
-       * @see java.lang.Object#toString()
-       */
       @Override
       public String toString()
       {

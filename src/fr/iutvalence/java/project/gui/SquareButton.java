@@ -27,25 +27,16 @@ public class SquareButton extends JButton
             this.hoverColor = getBackground().darker();
       }
 
-      /**
-       * @return the hoverColor
-       */
       public Color getHoverColor()
       {
             return hoverColor;
       }
 
-      /**
-       * @return the piece
-       */
       public Image getPiece()
       {
             return this.piece;
       }
 
-      /**
-       * @return the position
-       */
       public Position getPosition()
       {
             return position;
@@ -54,10 +45,7 @@ public class SquareButton extends JButton
       @Override
       protected void paintComponent(Graphics g)
       {
-            /*
-             * if (getModel().isPressed()) { g.setColor(pressedBackgroundColor);
-             * } else
-             */
+            
             super.paintComponent(g);
             if (getModel().isRollover())
             {
@@ -76,17 +64,11 @@ public class SquareButton extends JButton
 
       }
 
-      /**
-       * @param hoverColor the hoverColor to set
-       */
       public void setHoverColor(Color hoverColor)
       {
             this.hoverColor = hoverColor;
       }
-
-      /**
-       * @param piece the piece to set
-       */
+      
       public void setPiece(Image piece)
       {
             this.piece = piece;
